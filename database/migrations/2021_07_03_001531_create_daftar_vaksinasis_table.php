@@ -19,6 +19,8 @@ class CreateDaftarVaksinasisTable extends Migration
             $table->string('id_vaksinasi');
             $table->string('nik');
             $table->string('nama');
+            $table->string('alamat');
+            $table->string('tanggal_lahir');
             $table->string('email');
             $table->string('no_telp');
             $table->string('foto_ktp');

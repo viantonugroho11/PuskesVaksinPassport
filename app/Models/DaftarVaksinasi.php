@@ -13,6 +13,8 @@ class DaftarVaksinasi extends Model
         'id_user',
         'id_vaksinasi',
         'nik',
+        'alamat',
+        'tanggal_lahir',
         'nama',
         'email',
         'no_telp',
