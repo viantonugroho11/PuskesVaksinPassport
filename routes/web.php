@@ -28,14 +28,14 @@ Route::livewire('/admin/tempat', 'admin.tempat.index')
     ->layout('livewire.admin.master')->name('admin.tempat');
 Route::livewire('/admin/tempat/create', 'admin.tempat.create')
     ->layout('livewire.admin.master')->name('admin.tempat.create');
-Route::livewire('/admin/tempat/edit', 'admin.tempat.edit')
+Route::livewire('/admin/tempat/edit/{id}', 'admin.tempat.edit')
     ->layout('livewire.admin.master')->name('admin.tempat.edit');
 
 Route::livewire('/admin/vaksinasi', 'admin.vaksinasi.index')
     ->layout('livewire.admin.master')->name('admin.vaksinasi');
 Route::livewire('/admin/vaksinasi/create', 'admin.vaksinasi.create')
     ->layout('livewire.admin.master')->name('admin.vaksinasi.create');
-Route::livewire('/admin/vaksinasi/edit', 'admin.vaksinasi.edit')
+Route::livewire('/admin/vaksinasi/edit/{id}', 'admin.vaksinasi.edit')
     ->layout('livewire.admin.master')->name('admin.vaksinasi.edit');
 
 Route::livewire('/admin/laporan/peserta', 'admin.laporan.index')

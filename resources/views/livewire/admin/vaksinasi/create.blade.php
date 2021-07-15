@@ -35,8 +35,33 @@
              <form wire:submit.prevent="store">
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Input Nama</label>
-                    <input type="text" wire:model="nama" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <label for="exampleInputEmail1">Nama</label>
+                    <input type="text" wire:model="nama" class="form-control" id="exampleInputEmail1" placeholder="Nama Vaksinasi">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Tempat</label>
+                    {{-- <input type="text" wire:model="tempat" class="form-control" id="exampleInputEmail1" placeholder="Nama Vaksinasi"> --}}
+                    <select wire:model="tempat" class="form-control">
+                      @foreach ($tempat as $item)
+                        <option value="{{$item->id}}">{{$item->nama}}</option>
+                      @endforeach  
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Stok</label>
+                    <input type="number" wire:model="stok" class="form-control" id="exampleInputEmail1" placeholder="Stok ">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Tanggal</label>
+                    <input type="date" wire:model="tanggal" class="form-control" id="exampleInputEmail1" placeholder="Tanggal Vaksinasi">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Jam Mulai</label>
+                    <input type="date" wire:model="mulai" class="form-control" id="exampleInputEmail1" placeholder="Jam Mulai">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Jam Selesai</label>
+                    <input type="date" wire:model="selesai" class="form-control" id="exampleInputEmail1" placeholder="Jam Selesai">
                   </div>
                 </div>
                 <!-- /.card-body -->

@@ -33,7 +33,6 @@
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Tempat Vaksinasi
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
@@ -42,8 +41,6 @@
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Jadwal Vaksinasi
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span>
               </p>
             </a>
           </li>
@@ -51,8 +48,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                Data Pendaftaran Vaksinasi
-                <i class="right fas fa-angle-left"></i>
+                Data Pendaftaran Vaksin
               </p>
             </a>
           </li>

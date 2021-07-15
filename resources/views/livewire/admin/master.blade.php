@@ -29,8 +29,12 @@
   <link rel="stylesheet" href="{{asset('asset/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{asset('asset/admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{asset('asset/admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+  @livewireStyles
 </head>
+
+
 <body class="hold-transition sidebar-mini layout-fixed">
+@livewireScripts
 <div class="wrapper">
 
   <!-- Preloader -->
