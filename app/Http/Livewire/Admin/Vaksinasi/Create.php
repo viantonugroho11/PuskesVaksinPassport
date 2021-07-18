@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Livewire\Admin\Vaksinasi;
 
 use Livewire\Component;
@@ -19,7 +20,7 @@ class Create extends Component
     {
         $this->validate([
             'nama' => 'required',
-            'tempat' => 'required',
+            // 'tempat' => 'required',
             'stok' => 'required',
             'tanggal' => 'required',
             'mulai' => 'required',
@@ -38,7 +39,8 @@ class Create extends Component
 
     public function render()
     {
-        $tempat=tempat::all();
-        return view('livewire.admin.vaksinasi.create',compact('tempat'));
+        $tempatform=Tempat::latest()->get();
+        // dd($tempat);
+        return view('livewire.admin.vaksinasi.create',compact('tempatform'));
     }
 }

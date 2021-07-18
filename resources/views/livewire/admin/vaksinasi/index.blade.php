@@ -26,7 +26,9 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Data Vaksinasi</h3>
+                <h3 class="card-title">
+                  <a href="{{route('admin.vaksinasi.create')}}" class="btn btn-xs btn-primary">Tambah Vaksinasi</a>
+                </h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -41,17 +43,18 @@
                       <th>Stok</th>
                     </tr>
                   </thead>
+                  @php
+                    $no=1;
+                  @endphp
                   <tbody>
                     @foreach ($vaksinasi as $item)
                         <tr> 
-                          <td>1.</td>
-                          <td>Update software</td>
-                          <td>
-                            <div class="progress progress-xs">
-                              <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                            </div>
-                          </td>
-                          <td><span class="badge bg-danger">55%</span></td>
+                          <td>{{$no++}}</td>
+                          <td>{{$item->nama}}</td>
+                          <td>{{$item->TempatNama}}</td>
+                          <td>{{$item->tanggal}}</td>
+                          <td>{{$item->jam_mulai}} - {{$item->jam_selesai}}</td>
+                          <td>{{$item->stok}}</td>
                         </tr>
                     @endforeach
                   </tbody>

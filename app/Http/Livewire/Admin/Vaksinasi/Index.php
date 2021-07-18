@@ -11,7 +11,9 @@ class Index extends Component
 {
     public function render()
     {
-        $vaksinasi=Vaksinasi::all();
+        $vaksinasi=Vaksinasi::join('tempats','tempats.id','vaksinasis.id_tempat')
+        ->select('vaksinasis.*','tempats.nama as TempatNama')
+        ->latest()->get();
         return view('livewire.admin.vaksinasi.index',compact('vaksinasi'));
     }
 }

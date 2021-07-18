@@ -46,7 +46,7 @@
 
   @include('livewire.admin.tools.sidebar')
 
-  @yield('content')
+    @yield('content')
 
   @include('livewire.admin.tools.footer')
   

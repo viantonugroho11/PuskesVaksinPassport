@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -45,8 +45,10 @@ Route::livewire('/admin/laporan/peserta', 'admin.laporan.index')
 // Route::livewire('/admin/laporan/tempat', 'admin.dashboard')
 //     ->layout('livewire.admin.master')->name('admin.home');
 
-// Route::livewire('/admin/peserta', 'admin.dashboard')
-//     ->layout('livewire.admin.master')->name('admin.home');
+Route::livewire('/', 'user.home')
+    ->layout('livewire.user.master')->name('user.home');
 
-// Route::livewire('/admin/cekpeserta', 'admin.dashboard')
-//     ->layout('livewire.admin.master')->name('admin.home');
+Route::livewire('/cekpeserta', 'user.cekvaksin')
+    ->layout('livewire.user.master')->name('user.cekvaksin');
+Route::livewire('/daftarvaksin', 'user.daftarvaksin')
+    ->layout('livewire.user.master')->name('user.daftarvaksin');

@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Add Kategori</h1>
+            <h1>Tambah Vaksinasi</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Kategori</li>
+              <li class="breadcrumb-item"><a href="{{route('admin.home')}}">Home</a></li>
+              <li class="breadcrumb-item active">Tambah Vaksinasi</li>
             </ol>
           </div>
         </div>
@@ -41,10 +41,11 @@
                   <div class="form-group">
                     <label for="exampleInputEmail1">Tempat</label>
                     {{-- <input type="text" wire:model="tempat" class="form-control" id="exampleInputEmail1" placeholder="Nama Vaksinasi"> --}}
-                    <select wire:model="tempat" class="form-control">
-                      @foreach ($tempat as $item)
+                    <select class="form-control" wire:model.lazy="tempat">
+                      <option value="">--Pilih Tempat--</option>
+                      @foreach ($tempatform as $item)
                         <option value="{{$item->id}}">{{$item->nama}}</option>
-                      @endforeach  
+                      @endforeach
                     </select>
                   </div>
                   <div class="form-group">
