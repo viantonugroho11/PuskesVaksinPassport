@@ -10,6 +10,7 @@ class Vaksinasi extends Model
     use HasFactory;
 
     protected $fillable = [
+        
         'nama',
         'id_tempat',
         'tanggal_swab',

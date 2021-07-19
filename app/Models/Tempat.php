@@ -10,6 +10,7 @@ class Tempat extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'nama',
         'alamat',
         'koordinat',
