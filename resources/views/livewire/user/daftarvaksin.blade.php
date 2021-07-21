@@ -82,11 +82,11 @@
                         <div class="input-group">
                             <label class="label">Tanggal Vaksin</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select wire:model="tanggal_vaksin">
-                                    <option disabled="disabled" selected="selected">Pilih Tanggal</option>
+                                <select wire:model="tanggal_vaksin" wire:change="$emit('postTanggal')">
+                                    <option>Pilih Tanggal</option>
                                     @if($tanggal_vaksinasi)
                                     @foreach ($tanggal_vaksinasi as $item)
-                                        <option>{{$item->tanggal}}</option>
+                                        <option value="{{$item->tanggal}}">{{$item->tanggal}}</option>
                                     @endforeach
                                     @endif
                                 </select>
@@ -96,11 +96,16 @@
                         <div class="input-group">
                             <label class="label">Sesi Vaksin</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select wire:model="sesi">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Subject 1</option>
-                                    <option>Subject 2</option>
-                                    <option>Subject 3</option>
+                                <select wire:model="sesiform">
+                                    <option>Pilih Sesi</option>
+                                    @if($sesi)
+                                    @php
+                                    $no=1;    
+                                    @endphp
+                                    @foreach ($sesi as $item)
+                                        <option value="{{$item->id}}">Sesi {{$no++}} Jam {{$item->jam_mulai}} - {{$item->jam_selesai}}</option>
+                                    @endforeach
+                                    @endif
                                 </select>
                                 <div class="select-dropdown"></div>
                             </div>

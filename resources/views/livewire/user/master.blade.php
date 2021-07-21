@@ -39,7 +39,7 @@
 
     <!-- Main JS-->
     <script src="{{asset('asset/user/js/global.js')}}"></script>
-    {{-- <script src="{{ mix('js/app.js') }}"></script>  --}}
+    <script src="{{ mix('js/app.js') }}"></script> 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
 </html>
