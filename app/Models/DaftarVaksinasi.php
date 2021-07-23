@@ -19,5 +19,6 @@ class DaftarVaksinasi extends Model
         'email',
         'no_telp',
         'foto_ktp',
+        'link',
     ];
 }

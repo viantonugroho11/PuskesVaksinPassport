@@ -24,6 +24,7 @@ class CreateDaftarVaksinasisTable extends Migration
             $table->string('email');
             $table->string('no_telp');
             $table->string('foto_ktp');
+            $table->string('link');
             $table->timestamps();
         });
     }

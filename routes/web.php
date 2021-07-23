@@ -50,5 +50,6 @@ Route::livewire('/', 'user.home')
 
 Route::livewire('/cekpeserta', 'user.cekvaksin')
     ->layout('livewire.user.master')->name('user.cekvaksin');
+    
 Route::livewire('/daftarvaksin', 'user.daftarvaksin')
     ->layout('livewire.user.master')->name('user.daftarvaksin');

@@ -48,16 +48,14 @@
                         <div class="row">
                             <div class="input-group" style="width: 100%">
                                 <label class="label">Jenis Kelamin *</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Laki-Laki
-                                            <input wire:model="jenis_kelamin" type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Perempuan
-                                            <input wire:model="jenis_kelamin" type="radio" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select wire:model="jenis_kelamin">
+                                        <option>Pilih Jenis Kelamin</option>
+                                        <option value="Laki-Laki">Laki-Laki</option>
+                                        <option value="Perempuan">Perempuan</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
                             </div>
                         </div>
                 </div>
@@ -67,7 +65,7 @@
                 <div class="card-body">
                     <h4 class="title">Jadwal dan Sesi</h4>
                     <h5 >Apabila tanggal/sesi vaksin tidak dapat dipilih, kuota pada tanggal/sesi vaksin tersebut telah habis.</h5>
-                    <form method="">
+                    {{-- <form method=""> --}}
                         <br>
                         <div class="input-group">
                             <label class="label">Lokasi Vaksin</label>
@@ -113,7 +111,7 @@
                         <div class="p-t-15">
                             <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
                         </div>
-                    </form>
+                    {{-- </form> --}}
                 </div>
             </div>
             </form>
